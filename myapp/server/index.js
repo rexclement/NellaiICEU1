@@ -20,6 +20,7 @@ const members_router = require("./routers/Member");
 const cell_router = require("./routers/Prayer_cells");
 const Storesdb = require("./models/store");
 const { redirect } = require('react-router-dom');
+const MongoStore = require("connect-mongo");
 
 require("dotenv").config({path: "./config.env"})
 
@@ -48,6 +49,10 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: process.env.ATLAS_URI,
+    ttl: 60 * 60, // 1 hour in seconds
+  }),
   cookie: {
     maxAge: 60 * 60 * 1000,
     secure: false, // important for localhost
