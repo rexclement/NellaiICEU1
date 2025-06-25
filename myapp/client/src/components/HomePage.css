@@ -1,0 +1,387 @@
+/* HomePage.css
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .homepage-container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .homepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background-color: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .homepage-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00adb5;
+  }
+  
+  .homepage-nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .homepage-nav a:hover {
+    color: #00adb5;
+  }
+  
+  .homepage-login {
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .homepage-hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      url('https://source.unsplash.com/1600x900/?youth,technology') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #00ffc3;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+  
+  .homepage-about, .homepage-contact {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .homepage-about h2, .homepage-contact h2 {
+    font-size: 2rem;
+    color: #00adb5;
+    margin-bottom: 1rem;
+  }
+  
+  .homepage-contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .homepage-contact input,
+  .homepage-contact textarea {
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .homepage-contact button {
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .homepage-footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+   */
+
+   /* HomePage.css */
+
+/* HomePage.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+  scroll-behavior: smooth;
+  color: #2d2d2d;
+}
+
+.homepage-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.homepage-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #00ffc3;
+  letter-spacing: 1px;
+}
+
+.homepage-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #eee;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.homepage-nav a:hover {
+  color: #00ffc3;
+}
+
+.homepage-login {
+  background-color: #00ffc3;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.homepage-login:hover {
+  background-color: #00b8a1;
+}
+
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.login-form {
+  background: linear-gradient(to right, #434343, #000000);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  color: white;
+  animation: slideDown 0.5s ease-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #00ffc3;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #00ffc3;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #f1f1f1;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  box-shadow: 0 0 5px #00ffc3;
+}
+
+.login-form button {
+  background-color: #00ffc3;
+  color: #000;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #00b8a1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.homepage-hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://source.unsplash.com/1600x900/?youth,technology') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 700px;
+  backdrop-filter: blur(6px);
+}
+
+.hero-image {
+  max-width: 100%;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00ffc3;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+}
+
+.homepage-about, .homepage-contact {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.homepage-about h2, .homepage-contact h2 {
+  font-size: 2.2rem;
+  color: #00adb5;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.homepage-contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.homepage-contact input,
+.homepage-contact textarea {
+  margin: 0.5rem 0;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.homepage-contact button {
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.homepage-contact button:hover {
+  background-color: #007e82;
+}
+
+.homepage-footer {
+  background-color: #141e30;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+}

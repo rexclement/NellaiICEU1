@@ -1,0 +1,60 @@
+.welcome-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+  }
+  
+  .welcome-hero {
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .welcome-hero p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .welcome-section {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  .welcome-section h2 {
+    color: #6a11cb;
+    margin-bottom: 0.5rem;
+  }
+  
+  .fade-in {
+    animation-name: fadeIn;
+  }
+  
+  .slide-up {
+    animation-name: slideUp;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  

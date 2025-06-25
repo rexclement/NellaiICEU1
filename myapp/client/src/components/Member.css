@@ -1,0 +1,484 @@
+/* .members-container {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.members-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.members-add-btn {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.members-form {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.members-input,
+.members-textarea,
+.members-file {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.members-textarea {
+  grid-column: span 2;
+  resize: vertical;
+}
+
+.members-form-actions {
+  grid-column: span 2;
+  display: flex;
+  gap: 1rem;
+}
+
+.members-save-btn {
+  background-color: #16a34a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.members-cancel-btn {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+
+.members-role-section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.members-role-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.members-role-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.members-member-card {
+  width: 130px;
+  text-align: center;
+  position: relative;
+}
+
+.members-member-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: auto;
+}
+
+.members-member-name {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.members-actions {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  display: flex;
+  gap: 0.4rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.members-member-card:hover .members-actions {
+  opacity: 1;
+}
+
+.members-icon {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-icon {
+  color: #2563eb;
+}
+
+.delete-icon {
+  color: #dc2626;
+}
+
+.members-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.members-detail-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+}
+
+.members-detail-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.members-detail-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.members-detail-role {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.members-detail-desc {
+  margin-top: 1rem;
+  color: #374151;
+}
+
+.members-detail-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+} */
+
+
+
+/* Member.css */
+
+.members-container {
+  z-index: 0;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffffcc, #f0f0f0cc);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.members-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.members-add-btn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-bottom: 30px;
+}
+
+.members-add-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(106, 17, 203, 0.5);
+}
+
+.members-form {
+  background: #ffffff;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.members-input,
+.members-textarea,
+.members-file {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.members-input:focus,
+.members-textarea:focus {
+  border-color: #6a11cb;
+}
+
+.members-textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.members-form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.members-save-btn,
+.members-cancel-btn {
+  padding: 10px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.members-save-btn {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #fff;
+}
+
+.members-cancel-btn {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.members-save-btn:hover {
+  background: linear-gradient(135deg, #38f9d7, #43e97b);
+  transform: translateY(-2px);
+}
+
+.members-cancel-btn:hover {
+  background: #ff4d4d;
+  transform: translateY(-2px);
+}
+
+.members-whole-section {
+  margin-top: 40px;
+}
+
+.members-role-section {
+  margin-bottom: 50px;
+}
+
+.members-role-title {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.members-role-title::after {
+  content: "";
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  position: absolute;
+  left: 25%;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.members-role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  /* justify-content: space-around;
+  flex-wrap: wrap; */
+}
+
+.members-member-card {
+  position: relative;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.members-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.members-member-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes it a perfect circle */
+  border: 4px solid #4f46e5; /* Nice colored border (optional, for beauty) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.members-member-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.members-member-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.members-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.members-icon {
+  font-size: 1.2rem;
+  color: #666;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.members-icon:hover {
+  color: #6a11cb;
+  transform: scale(1.2);
+}
+
+.members-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.members-detail-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.members-detail-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #2575fc;
+}
+
+.members-detail-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.members-detail-role {
+  font-size: 1.2rem;
+  color: #6a11cb;
+  margin-bottom: 15px;
+}
+
+.members-detail-desc {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.members-detail-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.members-detail-close:hover {
+  color: #333;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make everything responsive */
+@media (max-width: 768px) {
+  .members-form {
+    width: 90%;
+  }
+
+  .members-role-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
