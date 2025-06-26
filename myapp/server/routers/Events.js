@@ -1,7 +1,6 @@
 const express = require("express");
 const { eventUpload } = require("../middlewares/upload"); // Import multer middleware
 const {eventdb, fellowshipdb, missiondb} = require("../models/event_details"); 
-const path = require("path");
 const mongoose = require('mongoose');
 const router = express.Router();
 const streamifier = require("streamifier");

@@ -189,7 +189,6 @@ router.put("/update/", async (req, res) => {
       if (!updatedCell) {
         return res.status(404).json({ error: "Cell not found" });
       }
-      console.log('updatedCell',updatedCell);
       res.json(updatedCell);
     } catch (error) {
       console.error(error);

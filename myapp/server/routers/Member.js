@@ -4,10 +4,9 @@ const router = express.Router();
 const { teamMemberUpload } = require('../middlewares/upload');
 const streamifier = require("streamifier");
 const {cloudinary} = require("../middlewares/cloudinary");
-const fs = require('fs');
-const path = require('path');
 
-// Predefined roles (match naming of default images)
+
+
 const predefinedRoles = [
   "President",
   "Secretary",
@@ -33,9 +32,9 @@ async function deleteFromCloudinary(publicId, resourceType = "image") {
 
   try {
     await cloudinary.uploader.destroy(publicId, { resource_type: resourceType });
-    console.log(`✅ Successfully deleted from Cloudinary: ${publicId}`);
+    console.log(`✅ Successfully deleted from Cloudinary`);
   } catch (error) {
-    console.error(`❌ Cloudinary deletion failed for ${publicId}:`, error);
+    console.error(`❌ Cloudinary deletion failed`, error);
   }
 }
 
@@ -89,18 +88,7 @@ router.post("/add", teamMemberUpload.single("photo"), async (req, res) => {
       photoUrl = result.secure_url;
       public_key = result.public_id;
     } else {
-      // 🔄 Role-based default fallback
-      const normalizedRole = role.toLowerCase().replace(/\s+/g, "-");
-      
-      const isPredefined = predefinedRoles.some(
-        r => r.toLowerCase() === role.toLowerCase()
-      );
-      
-      if (isPredefined) {
-        photoUrl = `uploads/team_members/defaults/${normalizedRole}.png`;
-      } else {
-        photoUrl = "uploads/team_members/defaults/default.png";
-      }
+      photoUrl = "uploads/team_members/defaults/default.png";
     }
 
     const newMember = new membersdb({
