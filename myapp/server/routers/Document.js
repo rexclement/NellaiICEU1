@@ -56,13 +56,16 @@ router.post("/add", documentUpload.single("file"), async (req, res) => {
       {
         folder: "Home/uploads/documents",
         resource_type: "auto",
+        use_filename: true,
+        unique_filename: true,
+        access_mode: "public"
       },
       async (error, result) => {
         if (error) {
           console.error("Cloudinary upload error:", error);
           return res.status(500).json({ error: "Upload to Cloudinary failed" });
         }
-        console.log(result);
+        
         const newDoc = new Documentdb({
           name: file.originalname,
           category,
