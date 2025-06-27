@@ -90,7 +90,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser(async (sessionUser, done) => {
-  console.log("🔁 deserializeUser called:", sessionUser);
+  
   try {
     const user = await Storesdb.findById(sessionUser.id);
     if (user) {
